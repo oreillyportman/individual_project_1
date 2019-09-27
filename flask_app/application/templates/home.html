@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block body_content %}
+	<hl> Home Page </hl>
+	<p>Powering potential at home</p>
+	{% for post in posts %}
+		<div>
+			<h3>{{ post.title }}</h3>
+			<p><b> - ID:</b> {{ post.author.first_name }}  {{ post.author.last_name }}</p>
+			<span><b> - on the </b>{{ post.date_posted }}</span>
+			<p> -- {{ post.content }}</p>
+		</div>
+	{% endfor %}
+{% endblock body_content %}
